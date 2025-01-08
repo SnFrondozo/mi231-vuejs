@@ -1,0 +1,134 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'menu main right'
+        'footer footer';
+    grid-template-columns: 25% 45% 25%; /* Three-column layout */
+    gap: 20px;
+    padding: 10px;
+}
+
+
+.item1, .item2, .item3, .item4, .item5 {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+.item1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+}
+
+
+.item2 {
+    padding: 20px;
+    background-color: #1f1f1f;
+}
+
+.item2 ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.item2 ul li a {
+    display: block;
+    padding: 10px 20px;
+    background: #1f1f1f;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.item2 ul li a:hover {
+    background: #00bcd4;
+    color: #ffffff;
+}
+
+.item2 ul li {
+    margin: 15px 0;
+}
+
+.item2 ul li a i {
+    margin-right: 8px;
+    color: #00bcd4;
+}
+
+
+.item3 {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.item3 img.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.item4 {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.item4 .game {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.item4 .game img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.item4 .game p {
+    font-size: 16px;
+}
+
+
+.item5 {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
